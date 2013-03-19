@@ -2,30 +2,21 @@
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Värd: 127.0.0.1
--- Skapad: 10 feb 2013 kl 06:58
--- Serverversion: 5.5.27
--- PHP-version: 5.4.7
+-- Хост: 127.0.0.1
+-- Время создания: Янв 08 2013 г., 22:55
+-- Версия сервера: 5.5.27
+-- Версия PHP: 5.4.7
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
--- Databas: `dayz`
+-- База данных: `dayz_longhost`
+--
+--
+-- Структура таблицы `adm_admins`
 --
 
--- --------------------------------------------------------
-
---
--- Tabellstruktur `adm_admins`
---
-
+DROP TABLE IF EXISTS `adm_admins`;
 CREATE TABLE IF NOT EXISTS `adm_admins` (
   `id` smallint(8) unsigned NOT NULL AUTO_INCREMENT,
   `login` varchar(50) NOT NULL DEFAULT '',
@@ -38,18 +29,19 @@ CREATE TABLE IF NOT EXISTS `adm_admins` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Dumpning av Data i tabell `adm_admins`
+-- Дамп данных таблицы `adm_admins`
 --
 
 INSERT INTO `adm_admins` (`id`, `login`, `password`, `guid`, `lastlogin`, `permissions`) VALUES
-(1, 'superadmin', 'e10adc3949ba59abbe56e057f20f883e', '', '2012-12-23 23:48:56', 'control,admins,chat,entities,map,');
+(1, 'superadmin', 'e10adc3949ba59abbe56e057f20f883e', '', '2012-12-24 02:48:56', 'control,admins,chat,entities,map,');
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `adm_admins_log`
+-- Структура таблицы `adm_admins_log`
 --
 
+DROP TABLE IF EXISTS `adm_admins_log`;
 CREATE TABLE IF NOT EXISTS `adm_admins_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `action` varchar(255) DEFAULT NULL,
@@ -61,118 +53,10 @@ CREATE TABLE IF NOT EXISTS `adm_admins_log` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `adm_icons`
+-- Структура таблицы `adm_objects`
 --
 
-CREATE TABLE IF NOT EXISTS `adm_icons` (
-  `Classname` varchar(128) NOT NULL DEFAULT '',
-  `Type` varchar(128) DEFAULT NULL,
-  PRIMARY KEY (`Classname`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumpning av Data i tabell `adm_icons`
---
-
-INSERT INTO `adm_icons` (`Classname`, `Type`) VALUES
-('AH6X_DZ', 'helicopter'),
-('AN2_DZ', 'aircraftsmall'),
-('ATV_CZ_EP1', 'atv'),
-('ATV_US_EP1', 'atv'),
-('BAF_Offroad_D', 'car'),
-('BAF_Offroad_W', 'car'),
-('C130J', 'plane'),
-('car_hatchback', 'car'),
-('car_sedan', 'car'),
-('datsun1_civil_1_open', 'car'),
-('datsun1_civil_2_covered', 'car'),
-('datsun1_civil_3_open', 'car'),
-('Fishing_Boat', 'boat'),
-('Fishing_Boat_DZ', 'largeboat'),
-('Hedgehog_DZ', 'hedgehog'),
-('hilux1_civil_1_open', 'car'),
-('hilux1_civil_2_covered', 'car'),
-('hilux1_civil_3_open', 'car'),
-('hilux1_civil_3_open_EP1', 'car'),
-('HMMWV_DES_EP1', 'truck'),
-('HMMWV_DZ', 'truck'),
-('Ikarus', 'bus'),
-('Ikarus_TK_CIV_EP1', 'bus'),
-('Lada1', 'car'),
-('Lada1_TK_CIV_EP1', 'car'),
-('Lada2', 'car'),
-('Lada2_TK_CIV_EP1', 'car'),
-('LadaLM', 'car'),
-('LandRover_CZ_EP1', 'car'),
-('LandRover_TK_CIV_EP1', 'car'),
-('M1030', 'motorcycle'),
-('M1030_US_DES_EP1', 'motorcycle'),
-('MH6J_EP1', 'helicopter'),
-('Mi17_Civilian_DZ', 'helicopter'),
-('Mi17_DZ', 'helicopter'),
-('MMT_Civ', 'bike'),
-('Old_bike_TK_CIV_EP1', 'bike'),
-('Old_bike_TK_INS_EP1', 'bike'),
-('Old_moto_TK_Civ_EP1', 'motorcycle'),
-('PBX', 'smallboat'),
-('PBX_DZ', 'smallboat'),
-('Pickup_PK_DZ', 'car'),
-('Roket_Maule_M7_STD', 'plane'),
-('S1203_TK_CIV_EP1', 'bus'),
-('Sandbag1_DZ', 'sandbag'),
-('Skoda', 'car'),
-('SkodaBlue', 'car'),
-('SkodaGreen', 'car'),
-('SkodaRed', 'car'),
-('Smallboat_1', 'mediumboat'),
-('Smallboat_1_DZ', 'mediumboat'),
-('Smallboat_2', 'mediumboat'),
-('Smallboat_2_DZ', 'mediumboat'),
-('SUV_Blue', 'car'),
-('SUV_Charcoal', 'car'),
-('SUV_Green', 'car'),
-('SUV_Orange', 'car'),
-('SUV_Pink', 'car'),
-('SUV_Red', 'car'),
-('SUV_Silver', 'car'),
-('SUV_Special', 'car'),
-('SUV_TK_CIV_EP1', 'car'),
-('SUV_TK_EP1', 'car'),
-('SUV_White', 'car'),
-('SUV_Yellow', 'car'),
-('TentStorage', 'tent'),
-('TowingTractor', 'tractor'),
-('Tractor', 'tractor'),
-('TT650_Civ', 'motorcycle'),
-('TT650_Gue', 'motorcycle'),
-('TT650_Ins', 'motorcycle'),
-('TT650_TK_CIV_EP1', 'motorcycle'),
-('TT650_TK_EP1', 'motorcycle'),
-('UAZ_INS', 'car'),
-('UAZ_MG_DZ', 'car'),
-('UAZ_RU', 'car'),
-('UAZ_Unarmed_TK_CIV_EP1', 'car'),
-('UAZ_Unarmed_TK_EP1', 'car'),
-('UAZ_Unarmed_UN_EP1', 'car'),
-('UH1H_DZ', 'helicopter'),
-('UralCivil', 'truck'),
-('UralCivil2', 'truck'),
-('UralRefuel_INS', 'truck'),
-('Ural_INS', 'truck'),
-('V3S_Civ', 'truck'),
-('VolhaLimo_TK_CIV_EP1', 'car'),
-('Volha_1_TK_CIV_EP1', 'car'),
-('Volha_2_TK_CIV_EP1', 'car'),
-('VWGolf', 'car'),
-('Wire_cat1', 'wire'),
-('Zodiac_DZ', 'smallboat');
-
--- --------------------------------------------------------
-
---
--- Tabellstruktur `adm_objects`
---
-
+DROP TABLE IF EXISTS `adm_objects`;
 CREATE TABLE IF NOT EXISTS `adm_objects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `class_name` varchar(60) NOT NULL,
@@ -189,10 +73,10 @@ CREATE TABLE IF NOT EXISTS `adm_objects` (
   `allowed` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1 - allowed, 0 - not allowed',
   PRIMARY KEY (`id`),
   UNIQUE KEY `class_name` (`class_name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=711 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=710 ;
 
 --
--- Dumpning av Data i tabell `adm_objects`
+-- Дамп данных таблицы `adm_objects`
 --
 
 INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `transport_max_weapons`, `transport_max_magazines`, `transport_max_backpacks`, `cargo`, `slots`, `icon_type`, `rmod_supported`, `allowed`) VALUES
@@ -610,7 +494,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (413, '10x_303', 's10x_303', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (414, '15Rnd_9x19_M9', 's15Rnd_9x19_M9', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
 (415, '15Rnd_9x19_M9SD', 's15Rnd_9x19_M9SD', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
-(416, '15Rnd_W1866_Pellet', 's15Rnd_W1866_Pellet', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(416, '15Rnd_W1866_Pellet', 's15Rnd_W1866_Pellet', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
 (417, '15Rnd_W1866_Slug', 's15Rnd_W1866_Slug', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (418, '17Rnd_9x19_glock17', 's17Rnd_9x19_glock17', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
 (419, '1Rnd_HE_M203', 's1Rnd_HE_M203', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
@@ -652,11 +536,11 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (455, 'AK_47_M', 'sAK_47_M', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (456, 'AK_47_S', 'sAK_47_S', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (457, 'AK_74', 'sAK_74', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(458, 'AK_74_GL', 'sAK_74_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(458, 'AK_74_GL', 'sAK_74_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (459, 'AK_74_GL_kobra', 'sAK_74_GL_kobra', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (460, 'BAF_AS50_scoped', 'sBAF_AS50_scoped', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (461, 'BAF_L85A2_RIS_CWS', 'sBAF_L85A2_RIS_CWS', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(462, 'BAF_L85A2_RIS_Holo', 'sBAF_L85A2_RIS_Holo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(462, 'BAF_L85A2_RIS_Holo', 'sBAF_L85A2_RIS_Holo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (463, 'BAF_L85A2_UGL_Holo', 'sBAF_L85A2_UGL_Holo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (464, 'Binocular', 'sBinocular', 'item', 'binocular', 0, 0, 0, 0, 1, 'binocular', 0, 1),
 (465, 'Laserdesignator', 'sLaserdesignator', 'item', 'binocular', 0, 0, 0, 0, 1, 'binocular', 0, 0),
@@ -667,7 +551,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (470, 'BoltSteel', 'sBoltSteel', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (471, 'Colt1911', 'sColt1911', 'item', 'pistol', 0, 0, 0, 0, 5, 'pistol', 0, 1),
 (472, 'Crossbow', 'sCrossbow', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(473, 'crowbar_swing', 'scrowbar_swing', 'item', 'none', 0, 0, 0, 0, 1, 'none', 0, 1),
+(473, 'crowbar_swing', 'scrowbar_swing', 'item', 'none', 0, 0, 0, 0, 1, 'none', 0, 0),
 (474, 'CZ_VestPouch_EP1', 'sCZ_VestPouch_EP1', 'item', 'backpack', 0, 0, 0, 0, 1, 'backpack', 0, 1),
 (475, 'DMR', 'sDMR', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (476, 'DZ_ALICE_Pack_EP1', 'sDZ_ALICE_Pack_EP1', 'item', 'backpack', 4, 20, 0, 0, 1, 'backpack', 0, 1),
@@ -680,7 +564,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (483, 'FlareWhite_M203', 'sFlareWhite_M203', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
 (484, 'FN_FAL', 'sFN_FAL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (485, 'FN_FAL_ANPVS4', 'sFN_FAL_ANPVS4', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(486, 'G36A_camo', 'sG36A_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(486, 'G36A_camo', 'sG36A_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (487, 'FoodCanBakedBeans', 'sFoodCanBakedBeans', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (488, 'FoodCanFrankBeans', 'sFoodCanFrankBeans', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (489, 'FoodCanPasta', 'sFoodCanPasta', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
@@ -688,12 +572,12 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (491, 'FoodSteakCooked', 'sFoodSteakCooked', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (492, 'FoodSteakRaw', 'sFoodSteakRaw', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (493, 'G36a', 'sG36a', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(494, 'G36C', 'sG36C', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(494, 'G36C', 'sG36C', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (495, 'MG36', 'sMG36', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(496, 'G36C_camo', 'sG36C_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(496, 'G36C_camo', 'sG36C_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (497, 'G36_C_SD_eotech', 'sG36_C_SD_eotech', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (498, 'G36K', 'sG36K', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(499, 'G36K_camo', 'sG36K_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(499, 'G36K_camo', 'sG36K_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (500, 'G36_C_SD_camo', 'sG36_C_SD_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (501, 'glock17_EP1', 'sglock17_EP1', 'item', 'pistol', 0, 0, 0, 0, 5, 'pistol', 0, 1),
 (502, 'HandChemBlue', 'sHandChemBlue', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
@@ -770,7 +654,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (572, 'M16A4_GL', 'sM16A4_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (573, 'M16A4_ACG_GL', 'sM16A4_ACG_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (574, 'M24', 'sM24', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(575, 'M40A3', 'sM40A3', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(575, 'M40A3', 'sM40A3', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (576, 'M240', 'sM240', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (577, 'M240_DZ', 'sM240_DZ', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (578, 'M249', 'sM249', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
@@ -782,7 +666,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (584, 'M4A1_Aim', 'sM4A1_Aim', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (585, 'M4A1_Aim_camo', 'sM4A1_Aim_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (586, 'M4A1_AIM_SD_camo', 'sM4A1_AIM_SD_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(587, 'M4A1_HWS_GL', 'sM4A1_HWS_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(587, 'M4A1_HWS_GL', 'sM4A1_HWS_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (588, 'M4A1_HWS_GL_camo', 'sM4A1_HWS_GL_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (589, 'M4A1_HWS_GL_SD_Camo', 'sM4A1_HWS_GL_SD_Camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (590, 'M4A1_RCO_GL', 'sM4A1_RCO_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
@@ -847,10 +731,10 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (649, 'revolver_EP1', 'srevolver_EP1', 'item', 'pistol', 0, 0, 0, 0, 5, 'pistol', 0, 1),
 (650, 'revolver_gold_EP1', 'srevolver_gold_EP1', 'item', 'pistol', 0, 0, 0, 0, 5, 'pistol', 0, 0),
 (651, 'Sa61_EP1', 'sSa61_EP1', 'item', 'pistol', 0, 0, 0, 0, 5, 'pistol', 0, 0),
-(652, 'Sa58P_EP1', 'sSa58P_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(653, 'Sa58V_CCO_EP1', 'sSa58V_CCO_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(654, 'Sa58V_EP1', 'sSa58V_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(655, 'Sa58V_RCO_EP1', 'sSa58V_RCO_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(652, 'Sa58P_EP1', 'sSa58P_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
+(653, 'Sa58V_CCO_EP1', 'sSa58V_CCO_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
+(654, 'Sa58V_EP1', 'sSa58V_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
+(655, 'Sa58V_RCO_EP1', 'sSa58V_RCO_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (656, 'Saiga12K', 'sSaiga12K', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (657, 'SCAR_L_CQC', 'sSCAR_L_CQC', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (658, 'SCAR_L_CQC_CCO_SD', 'sSCAR_L_CQC_CCO_SD', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
@@ -876,7 +760,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (678, 'M24_des_EP1', 'sM24_des_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (679, 'M110_TWS_EP1', 'sM110_TWS_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (680, 'M110_NVG_EP1', 'sM110_NVG_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(681, 'SVD_CAMO', 'sSVD_CAMO', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(681, 'SVD_CAMO', 'sSVD_CAMO', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (682, 'VSS_Vintorez', 'sVSS_Vintorez', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (683, 'TrashJackDaniels', 'sTrashJackDaniels', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (684, 'TrashTinCan', 'sTrashTinCan', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
@@ -902,14 +786,112 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (707, '5Rnd_127x99_as50', '5Rnd_127x99_as50', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (708, '1Rnd_HE_GP25', '1Rnd_HE_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
 (709, 'Sandbag1_DZ', 'Sandbag1_DZ', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'Sandbag1_DZ', 1, 1),
-(710, 'DZ_TK_Assault_Pack_EP1', 'sDZ_TK_Assault_Pack_EP1', 'item', 'backpack', 2, 16, 0, 0, 1, 'backpack', 0, 1);
+(710, 'DZ_British_ACU', 'British ACU', 'vehicle', 'Backpacks', 3, 18, 1, 0, 0, 'Backpacks', 0, 1),
+(711, 'ItemMachete', 'Machete', 'Item', 'Item', 0, 0, 0, 0, 1, 'Item', 0, 1),
+(712, 'MeleeMachete', 'sMeleeMachete', 'Item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
+(713, 'FoodMRE', 'sFoodMRE', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(714, 'FoodPistachio', 'sFoodPistachio', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(715, 'FoodbeefCooked', 'sFoodbeefCooked', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(716, 'DZ_TK_Assault_Pack_EP1', 'Assault_Pack', 'vehicle', 'Backpacks', 1, 12, 0, 0, 0, 'Backpacks', 0, 1),
+(717, 'FoodCanUnlabeled', 'sFoodCanUnlabeled', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(718, 'ItemTrashRazor', 'sItemTrashRazor', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(719, 'ItemTrashToiletpaper', 'sItemTrashToiletpaper', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(720, 'WoodenArrow', 'sWoodenArrow', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(721, 'Quiver', 'sQuiver', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(722, 'Crossbow_DZ', 'sCrossbow_DZ', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
+(723, 'FoodNutmix', 'sFoodNutmix', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(724, 'DZ_Czech_Vest_Puch', 'DZ_Czech_Vest_Puch', 'vehicle', 'Backpacks', 0, 12, 0, 0, 0, 'Backpacks', 0, 1),
+(725, 'ItemCrowbar', 'sItemCrowbar', 'item', 'item', 0, 0, 0, 0, 1, 'item', 0, 1),
+(726, '30Rnd_556x45_G36', 's30Rnd_556x45_G36', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(727, 'MH6J_DZ', 'MH6J', 'vehicle', 'air', 3, 20, 0, 20, 0, 'helicopter', 1, 0),
+(728, 'HMMWV_DZ', 'HMMWV_DZ', 'vehicle', 'car', 10, 50, 7, 6, 0, 'jeep_closed', 0, 0),
+(729, 'FoodrabbitRaw', 'sFoodrabbitRaw', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(730, 'FoodmuttonRaw', 'sFoodmuttonRaw', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(731, '30Rnd_762x39_SA58', 's30Rnd_762x39_SA58', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(732, 'FoodbaconRaw', 'sFoodbaconRaw', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(733, 'FoodchickenRaw', 'sFoodchickenRaw', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(734, 'FoodmuttonCooked', 'sFoodmuttonCooked', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(735, 'FoodchickenCooked', 'sFoodchickenCooked', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(736, 'FoodbaconCooked', 'sFoodbaconCooked', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(737, 'FoodRabbitCooked', 'sFoodRabbitCooked', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(738, 'ItemSodaPepsiEmpty', 'sItemSodaPepsiEmpty', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(739, 'FoodCanUnlabeledEmpty', 'sFoodCanUnlabeledEmpty', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(740, 'BAF_AS50_TWS', 'sBAF_AS50_TWS', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(741, 'BAF_L85A2_RIS_SUSAT', 'sBAF_L85A2_RIS_SUSAT', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
+(742, 'BAF_L110A1_Aim', 'sBAF_L110A1_Aim', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(743, '30Rnd_545x39_AKSD', 's30Rnd_545x39_AKSD', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(744, '100Rnd_556x45_BetaCMag', 's100Rnd_556x45_BetaCMag', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(745, '30Rnd_556x45_G36SD', 's30Rnd_556x45_G36SD', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(746, '100Rnd_556x45_M249', 's100Rnd_556x45_M249', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(747, '5Rnd_127x108_KSVK', 's5Rnd_127x108_KSVK', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(748, '1Rnd_SmokeRed_M203', 's1Rnd_SmokeRed_M203', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
+(749, '1Rnd_SMOKE_GP25', 's1Rnd_SMOKE_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(750, 'FlareRed_GP25', 'sFlareRed_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
+(751, 'SmokeShellYellow', 'sSmokeShellYellow', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(752, 'SmokeShellOrange', 'sSmokeShellOrange', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(753, '20Rnd_B_765x17_Ball', 's20Rnd_B_765x17_Ball', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(754, '10Rnd_9x39_SP5_VSS', 's10Rnd_9x39_SP5_VSS', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(755, '20Rnd_762x51_SB_SCAR', 's20Rnd_762x51_SB_SCAR', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(756, '1Rnd_SmokeYellow_M203', 's1Rnd_SmokeYellow_M203', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
+(757, '100Rnd_762x54_PK', 's100Rnd_762x54_PK', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(758, 'SmokeShellBlue', 'sSmokeShellBlue', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(759, 'SmokeShellPurple', 'sSmokeShellPurple', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(760, '20Rnd_B_AA12_Pellets', 's20Rnd_B_AA12_Pellets', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(761, 'AA12_PMC', 'sAA12_PMC', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(762, 'HandGrenade_Stone', 'sHandGrenade_Stone', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(763, 'm8_carbine', 'sm8_carbine', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(764, 'm8_carbineGL', 'sm8_carbineGL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(765, 'm8_compact', 'sm8_compact', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(766, 'm8_compact_pmc', 'sm8_compact_pmc', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(767, 'm8_holo_sd', 'sm8_holo_sd', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(768, 'm8_tws', 'sm8_tws', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(769, 'm8_tws_sd', 'sm8_tws_sd', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(770, '20Rnd_762x51_B_SCAR', 's20Rnd_762x51_B_SCAR', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(771, '64Rnd_9x19_Bizon', 's64Rnd_9x19_Bizon', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(772, '6Rnd_SmokeRed_M203', 's6Rnd_SmokeRed_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(773, '6Rnd_FlareWhite_M203', 's6Rnd_FlareWhite_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(774, '6Rnd_HE_M203', 's6Rnd_HE_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(775, '6Rnd_FlareGreen_M203', 's6Rnd_FlareGreen_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(776, '6Rnd_FlareRed_M203', 's6Rnd_FlareRed_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(777, '6Rnd_FlareYellow_M203', 's6Rnd_FlareYellow_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(778, '6Rnd_Smoke_M203', 's6Rnd_Smoke_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(779, '6Rnd_SmokeGreen_M203', 's6Rnd_SmokeGreen_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(780, '6Rnd_SmokeYellow_M203', 's6Rnd_SmokeYellow_M203', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(781, 'BAF_LRR_scoped_W', 'sBAF_LRR_scoped_W', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(782, '75Rnd_545x39_RPK', 's75Rnd_545x39_RPK', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(783, '8Rnd_B_Saiga12_Pellets', 's8Rnd_B_Saiga12_Pellets', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(784, '8Rnd_B_Saiga12_74Slug', 's8Rnd_B_Saiga12_74Slug', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(785, '30Rnd_9x19_UZI_SD', 's30Rnd_9x19_UZI_SD', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(786, '20Rnd_9x39_SP5_VSS', 's20Rnd_9x39_SP5_VSS', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(788, '5Rnd_86x70_L115A1', 's5Rnd_86x70_L115A1', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(789, 'BAF_LRR_scoped', 'sBAF_LRR_scoped', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(790, 'BAF_L86A2_ACOG', 'sBAF_L86A2_ACOG', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(791, 'BAF_L17_40mm', 'sBAF_L17_40mm', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(792, 'BAF_L85A2_UGL_ACOG', 'sBAF_L85A2_UGL_ACOG', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(793, 'BAF_L85A2_UGL_SUSAT', 'sBAF_L85A2_UGL_SUSAT', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(794, 'BAF_L85A2_RIS_ACOG', 'sBAF_L85A2_RIS_ACOG', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(795, 'BAF_L7A2_GPMG', 'sBAF_L7A2_GPMG', 'item', 'backpack', 0, 0, 0, 0, 1, 'backpack', 0, 0),
+(796, '200Rnd_556x45_L110A1', 's200Rnd_556x45_L110A1', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(797, 'FlareWhite_GP25', 'sFlareWhite_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(798, 'FlareGreen_GP25', 'sFlareGreen_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(799, 'FlareYellow_GP25', 'sFlareYellow_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(800, '1Rnd_SmokeRed_GP25', 's1Rnd_SmokeRed_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(801, '1Rnd_SmokeGreen_GP25', 's1Rnd_SmokeGreen_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(802, '1Rnd_SmokeYellow_GP25', 's1Rnd_SmokeYellow_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(803, '8Rnd_9x18_MakarovSD', 's8Rnd_9x18_MakarovSD', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 0),
+(807, 'FoodbeefRaw', 'sFoodbeefRaw', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
+(806, 'BAF_L109A1_HE', 'sBAF_L109A1_HE', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(808, '20Rnd_B_AA12_HE', 's20Rnd_B_AA12_HE', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(809, '20Rnd_B_AA12_74Slug', 's20Rnd_B_AA12_74Slug', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(810, 'Ka60_GL_NAC', 'Ka60_GL_NAC', 'vehicle', 'air', 3, 10, 0, 20, 0, 'helicopter', 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `adm_players_log`
+-- Структура таблицы `adm_players_log`
 --
 
+DROP TABLE IF EXISTS `adm_players_log`;
 CREATE TABLE IF NOT EXISTS `adm_players_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `action` varchar(20) NOT NULL,
@@ -920,7 +902,3 @@ CREATE TABLE IF NOT EXISTS `adm_players_log` (
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
