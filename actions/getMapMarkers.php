@@ -9,14 +9,27 @@ require_once 'functions.php';
 require_once '../modules/rcon.php';
 if(!issecurity(true,true,'map')) {echo "<h2>Access Denied!</h2>"; exit;} 
 
+$info = array();
+if (!empty($_POST)) {
+	foreach ($_POST as $k=>$v) {
+		$info[$k] = $v;
+	}
+} else {
+	if (!empty($_GET)) {
+		foreach ($_GET as $k=>$v) {
+			$info[$k] = $v;
+		}
+	}
+}
+
 $map_perameters_array = getMapParameters(getMapName());              
 $markers= "[";
 $zindex = 0;
 
-if(  (isset($_POST['type']) && $_POST['type'] =='vehicle') || (isset($_POST['vehicles']) && !empty($_POST['vehicles']) )) {
+if(  (isset($info['type']) && $info['type'] =='vehicle') || (isset($info['vehicles']) && !empty($info['vehicles']) )) {
           
            $ivcid ='';
-          if(isset($_POST['id']) && !empty($_POST['id']) ) $ivcid = 'AND od.ObjectUID = '.$_POST['id']*1;
+          if(isset($info['id']) && !empty($info['id']) ) $ivcid = 'AND od.ObjectUID = '.$info['id']*1;
 
                $query = "SELECT 
             *,
@@ -56,9 +69,9 @@ if(  (isset($_POST['type']) && $_POST['type'] =='vehicle') || (isset($_POST['veh
       
 }
 
-if(isset($_POST['type']) && $_POST['type'] =='vehicle_spawns') {
+if(isset($info['type']) && $info['type'] =='vehicle_spawns') {
     $wvid ='';
-    if(isset($_POST['id']) && !empty($_POST['id'])) $wvid = 'AND od.ObjectUID = '.$_POST['id']*1;
+    if(isset($info['id']) && !empty($info['id'])) $wvid = 'AND od.ObjectUID = '.$info['id']*1;
 
           $query="SELECT 
             *,
@@ -98,9 +111,9 @@ if(isset($_POST['type']) && $_POST['type'] =='vehicle_spawns') {
       
       
       
-if(isset($_POST['type']) && $_POST['type'] == 'deployable' || isset($_POST['deployables']) && $_POST['deployables'] == 'deployable'  ){
+if(isset($info['type']) && $info['type'] == 'deployable' || isset($info['deployables']) && $info['deployables'] == 'deployable'  ){
     $insdepid ='';
-    if(isset($_POST['id']) && !empty($_POST['id'])) $insdepid = 'AND object_data.ObjectUID = '.$_POST['id'];          
+    if(isset($info['id']) && !empty($info['id'])) $insdepid = 'AND object_data.ObjectUID = '.$info['id'];          
 
   $query = "SELECT
 			*
@@ -151,7 +164,7 @@ if(isset($_POST['type']) && $_POST['type'] == 'deployable' || isset($_POST['depl
 }
               
       
-if(isset($_POST['players']) && $_POST['players']=='rcon_online') {  
+if(isset($info['players']) && $info['players']=='rcon_online') {  
 $answers =  getRconPlayers();       
 $players = $answers[0];
 
@@ -216,7 +229,7 @@ if (is_array($players)){
       
   
       
-if(isset($_POST['players']) && $_POST['players']=='alt_online'  && is_int(ALTERNATIVE_ONLINE_MINUTES)) {       
+if(isset($info['players']) && $info['players']=='alt_online'  && is_int(ALTERNATIVE_ONLINE_MINUTES)) {       
 
       $query = "
          SELECT 
@@ -242,10 +255,10 @@ $markers .= getMapMakersPlayersBD($query,$map_perameters_array, $zindex);
   
   
   
-if(isset($_POST['type']) && $_POST['type']=='players_all') {       
+if(isset($info['type']) && $info['type']=='players_all') {       
 
   $body_id ='';  
-  if(isset($_POST['id']) && !empty($_POST['id'])) $body_id ='AND cd.CharacterID='.$_POST['id']*1;  
+  if(isset($info['id']) && !empty($info['id'])) $body_id ='AND cd.CharacterID='.$info['id']*1;  
 
   $query = "
      SELECT 
@@ -268,7 +281,7 @@ if(isset($_POST['type']) && $_POST['type']=='players_all') {
   
   
   
-if(isset($_POST['type']) && $_POST['type']=='players_alive') {       
+if(isset($info['type']) && $info['type']=='players_alive') {       
 
 
 
@@ -293,7 +306,7 @@ if(isset($_POST['type']) && $_POST['type']=='players_alive') {
   
   
   
-if(isset($_POST['type']) && $_POST['type']=='players_dead') {       
+if(isset($info['type']) && $info['type']=='players_dead') {       
 
 
 
