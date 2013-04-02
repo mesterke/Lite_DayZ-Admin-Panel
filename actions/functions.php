@@ -755,6 +755,8 @@ function getMapName(){
 		return 'namalsk';
 	} else if (INSTANCE == 7) {
 		return 'tavi';
+	} else if (INSTANCE == 8) {
+		return 'mbg_celle2';
 	} else {
 		return false;
 	}
@@ -766,6 +768,12 @@ function getMapParameters($map_name)
     
     $map_array = array();
         switch ($map_name){
+            case "mbg_celle2":
+           	$map_array['pixelOrigin_'] = '96.3, 98';
+		$map_array['pixelsPerLonDegree_'] = '193 / 360';
+		$map_array['pixelsPerLonRadian_'] = '191 / (2 * Math.PI)';
+                $map_array['supported'] = true;                
+                break;
             case "chernarus":
            	$map_array['pixelOrigin_'] = '117.9, 96.4';
 		$map_array['pixelsPerLonDegree_'] = '227 / 360';
