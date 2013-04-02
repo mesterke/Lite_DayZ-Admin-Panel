@@ -40,14 +40,30 @@ To make the download smaller we have excluded all maps except Chernarus.
 Here is a list of all available maps.
 Download the zip file and extract to the "maps" folder in your web directory.
 
-Chernarus [**Download**] (https://www.box.com/s/je11xuxkx1fo2ff6uxir) (Already included)
-Lingor [**Download**] (https://www.box.com/s/bma4z0nfhz1dvrz7pq0m)
-Panthera [**Download**] (https://www.box.com/s/862v8tdf5slckgo5jjeq)
-Takistan [**Download**] (https://www.box.com/s/jjpdm5exkrm1abk4f4h2)
-Fallujah [**Download**] (https://www.box.com/s/mtid65xdi5cbhw2njkyy)
-Namalsk [**Download**] (https://www.box.com/s/58k0m6s579o5d5ysya0x)
-Taviana [**Download**] (https://www.box.com/s/yqw0gk2cud9hm1ckgb8y)
-Celle [**Download**] (https://www.box.com/s/oxo486k59gstybnhu90b)
+<tr>
+    <td>Chernarus</td> <td>[**Download**] (https://www.box.com/s/je11xuxkx1fo2ff6uxir) (Already included)</td>
+</tr>
+<tr>
+	<td>Lingor</td> <td>[**Download**] (https://www.box.com/s/bma4z0nfhz1dvrz7pq0m)</td>
+</tr>
+<tr>
+	<td>Panthera</td> <td>[**Download**] (https://www.box.com/s/862v8tdf5slckgo5jjeq)</td>
+</tr>
+<tr>
+	<td>Takistan</td> <td>[**Download**] (https://www.box.com/s/jjpdm5exkrm1abk4f4h2)</td>
+</tr>
+<tr>
+	<td>Fallujah</td> <td>[**Download**] (https://www.box.com/s/mtid65xdi5cbhw2njkyy)</td>
+</tr>
+<tr>
+	<td>Namalsk</td> <td>[**Download**] (https://www.box.com/s/58k0m6s579o5d5ysya0x)</td>
+</tr>
+<tr>
+	<td>Taviana</td> <td>[**Download**] (https://www.box.com/s/yqw0gk2cud9hm1ckgb8y)</td>
+</tr>
+<tr>
+	<td>Celle</td> <td>[**Download**] (https://www.box.com/s/oxo486k59gstybnhu90b)</td>
+</tr>
 
 
 How to UNinstall:
