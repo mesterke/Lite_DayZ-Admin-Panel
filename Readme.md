@@ -42,28 +42,28 @@ Download the zip file and extract to the "maps" folder in your web directory.
 
 <table>
 <tr>
-    <td>Chernarus</td> <td>[**Download**] (https://www.box.com/s/je11xuxkx1fo2ff6uxir) (Already included)</td>
+	<td>Chernarus</td> <td><a href="https://www.box.com/s/je11xuxkx1fo2ff6uxir">Download</a> (Already included">Download</a></td>
 </tr>
 <tr>
-	<td>Lingor</td> <td>[**Download**] (https://www.box.com/s/bma4z0nfhz1dvrz7pq0m)</td>
+	<td>Lingor</td> <td><a href="https://www.box.com/s/bma4z0nfhz1dvrz7pq0m">Download</a></td>
 </tr>
 <tr>
-	<td>Panthera</td> <td>[**Download**] (https://www.box.com/s/862v8tdf5slckgo5jjeq)</td>
+	<td>Panthera</td> <td><a href="https://www.box.com/s/862v8tdf5slckgo5jjeq">Download</a></td>
 </tr>
 <tr>
-	<td>Takistan</td> <td>[**Download**] (https://www.box.com/s/jjpdm5exkrm1abk4f4h2)</td>
+	<td>Takistan</td> <td><a href="https://www.box.com/s/jjpdm5exkrm1abk4f4h2">Download</a></td>
 </tr>
 <tr>
-	<td>Fallujah</td> <td>[**Download**] (https://www.box.com/s/mtid65xdi5cbhw2njkyy)</td>
+	<td>Fallujah</td> <td><a href="https://www.box.com/s/mtid65xdi5cbhw2njkyy">Download</a></td>
 </tr>
 <tr>
-	<td>Namalsk</td> <td>[**Download**] (https://www.box.com/s/58k0m6s579o5d5ysya0x)</td>
+	<td>Namalsk</td> <td><a href="https://www.box.com/s/58k0m6s579o5d5ysya0x">Download</a></td>
 </tr>
 <tr>
-	<td>Taviana</td> <td>[**Download**] (https://www.box.com/s/yqw0gk2cud9hm1ckgb8y)</td>
+	<td>Taviana</td> <td><a href="https://www.box.com/s/yqw0gk2cud9hm1ckgb8y">Download</a></td>
 </tr>
 <tr>
-	<td>Celle</td> <td>[**Download**] (https://www.box.com/s/oxo486k59gstybnhu90b)</td>
+	<td>Celle</td> <td><a href="https://www.box.com/s/oxo486k59gstybnhu90b">Download</a></td>
 </tr>
 </table>
 
