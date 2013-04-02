@@ -3,11 +3,9 @@ Admin web panel for Stapo's DayZ lite private server
 Info
 =================
 This is the SkynetDev's admin panel modified for Stapo's DayZ Lite Private server.
-Original panel can be found here:
-https://github.com/skynetdev/bliss_admin_panel
+Original panel can be found here: https://github.com/skynetdev/bliss_admin_panel
 
-Currently working on new functions
-Should now be working for DayZ 1.7.6.1
+Currently working on new functions but should now be working for DayZ 1.7.6.1
 
 -----------------
 
