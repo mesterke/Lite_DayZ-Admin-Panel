@@ -746,7 +746,7 @@ function getMapName(){
 	} else if (INSTANCE == 2) {
 		return 'lingor2';
 	} else if (INSTANCE == 3) {
-		return 'phantera';
+		return 'panthera';
 	} else if (INSTANCE == 4) {
 		return 'takistan';
 	} else if (INSTANCE == 5) {
