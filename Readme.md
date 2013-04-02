@@ -40,6 +40,7 @@ To make the download smaller we have excluded all maps except Chernarus.
 Here is a list of all available maps.
 Download the zip file and extract to the "maps" folder in your web directory.
 
+<table>
 <tr>
     <td>Chernarus</td> <td>[**Download**] (https://www.box.com/s/je11xuxkx1fo2ff6uxir) (Already included)</td>
 </tr>
@@ -64,7 +65,7 @@ Download the zip file and extract to the "maps" folder in your web directory.
 <tr>
 	<td>Celle</td> <td>[**Download**] (https://www.box.com/s/oxo486k59gstybnhu90b)</td>
 </tr>
-
+</table>
 
 How to UNinstall:
 =================
