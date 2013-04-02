@@ -734,21 +734,30 @@ function row_deployable_items($row, $chbox) {
 
 
 
-// get map name from instance table
+// Gets map name from instance set in adm_config.php
 
 function getMapNameForGoogleMap(){
-
-    return 'chernarus';
-    
-    
+    return getMapName();
 }
 
-
-
 function getMapName(){
-
-    return 'chernarus';
-
+	if (INSTANCE == 1) {
+		return 'chernarus';
+	} else if (INSTANCE == 2) {
+		return 'lingor';
+	} else if (INSTANCE == 3) {
+		return 'phantera2';
+	} else if (INSTANCE == 4) {
+		return 'takistan';
+	} else if (INSTANCE == 5) {
+		return 'fallujah';
+	} else if (INSTANCE == 6) {
+		return 'namalsk';
+	} else if (INSTANCE == 7) {
+		return 'tavi';
+	} else {
+		return false;
+	}
 }
 
 
