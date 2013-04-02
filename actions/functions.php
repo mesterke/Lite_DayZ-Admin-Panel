@@ -744,9 +744,9 @@ function getMapName(){
 	if (INSTANCE == 1) {
 		return 'chernarus';
 	} else if (INSTANCE == 2) {
-		return 'lingor';
+		return 'lingor2';
 	} else if (INSTANCE == 3) {
-		return 'phantera2';
+		return 'phantera';
 	} else if (INSTANCE == 4) {
 		return 'takistan';
 	} else if (INSTANCE == 5) {
@@ -754,7 +754,7 @@ function getMapName(){
 	} else if (INSTANCE == 6) {
 		return 'namalsk';
 	} else if (INSTANCE == 7) {
-		return 'tavi';
+		return 'taviana';
 	} else if (INSTANCE == 8) {
 		return 'mbg_celle2';
 	} else {
@@ -780,13 +780,13 @@ function getMapParameters($map_name)
 		$map_array['pixelsPerLonRadian_'] = '227 / (2 * Math.PI)';
                 $map_array['supported'] = true;                
                 break;
-            case "lingor":
+            case "lingor2":
            	$map_array['pixelOrigin_'] = '92.2, 67.9';
 		$map_array['pixelsPerLonDegree_'] = '184.4 / 360';
 		$map_array['pixelsPerLonRadian_'] = '184.4 / (2 * Math.PI)';
                 $map_array['supported'] = true;
                 break;
-            case "panthera2":
+            case "panthera":
            	$map_array['pixelOrigin_'] = '117.2, 42.9';
 		$map_array['pixelsPerLonDegree_'] = '234.4 / 360';
 		$map_array['pixelsPerLonRadian_'] = '234.4 / (2 * Math.PI)';
@@ -811,7 +811,7 @@ function getMapParameters($map_name)
 		$map_array['pixelsPerLonRadian_'] = '260 / (2 * Math.PI)';
                 $map_array['supported'] = true;
                 break;
-            case "tavi":
+            case "taviana":
            	$map_array['pixelOrigin_'] = '313.6, 86.5';
 		$map_array['pixelsPerLonDegree_'] = '627 / 360';
 		$map_array['pixelsPerLonRadian_'] = '627 / (2 * Math.PI)';
