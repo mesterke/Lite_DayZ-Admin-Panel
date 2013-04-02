@@ -42,7 +42,7 @@ Download the zip file and extract to the "maps" folder in your web directory.
 
 <table>
 <tr>
-	<td>Chernarus</td> <td><a href="https://www.box.com/s/je11xuxkx1fo2ff6uxir">Download</a> (Already included">Download</a></td>
+	<td>Chernarus</td> <td><a href="https://www.box.com/s/je11xuxkx1fo2ff6uxir">Download</a> (Already included)</td>
 </tr>
 <tr>
 	<td>Lingor</td> <td><a href="https://www.box.com/s/bma4z0nfhz1dvrz7pq0m">Download</a></td>
