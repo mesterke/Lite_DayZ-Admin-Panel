@@ -53,6 +53,115 @@ CREATE TABLE IF NOT EXISTS `adm_admins_log` (
 -- --------------------------------------------------------
 
 --
+-- Tabellstruktur `adm_icons`
+--
+
+CREATE TABLE IF NOT EXISTS `adm_icons` (
+  `Classname` varchar(128) NOT NULL DEFAULT '',
+  `Type` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`Classname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumpning av Data i tabell `adm_icons`
+--
+
+INSERT INTO `adm_icons` (`Classname`, `Type`) VALUES
+('AH6X_DZ', 'helicopter'),
+('AN2_DZ', 'aircraftsmall'),
+('ATV_CZ_EP1', 'atv'),
+('ATV_US_EP1', 'atv'),
+('BAF_Offroad_D', 'car'),
+('BAF_Offroad_W', 'car'),
+('C130J', 'plane'),
+('car_hatchback', 'car'),
+('car_sedan', 'car'),
+('datsun1_civil_1_open', 'car'),
+('datsun1_civil_2_covered', 'car'),
+('datsun1_civil_3_open', 'car'),
+('Fishing_Boat', 'boat'),
+('Fishing_Boat_DZ', 'largeboat'),
+('Hedgehog_DZ', 'hedgehog'),
+('hilux1_civil_1_open', 'car'),
+('hilux1_civil_2_covered', 'car'),
+('hilux1_civil_3_open', 'car'),
+('hilux1_civil_3_open_EP1', 'car'),
+('HMMWV_DES_EP1', 'truck'),
+('HMMWV_DZ', 'truck'),
+('Ikarus', 'bus'),
+('Ikarus_TK_CIV_EP1', 'bus'),
+('Lada1', 'car'),
+('Lada1_TK_CIV_EP1', 'car'),
+('Lada2', 'car'),
+('Lada2_TK_CIV_EP1', 'car'),
+('LadaLM', 'car'),
+('LandRover_CZ_EP1', 'car'),
+('LandRover_TK_CIV_EP1', 'car'),
+('M1030', 'motorcycle'),
+('M1030_US_DES_EP1', 'motorcycle'),
+('MH6J_EP1', 'helicopter'),
+('Mi17_Civilian_DZ', 'helicopter'),
+('Mi17_DZ', 'helicopter'),
+('MMT_Civ', 'bike'),
+('Old_bike_TK_CIV_EP1', 'bike'),
+('Old_bike_TK_INS_EP1', 'bike'),
+('Old_moto_TK_Civ_EP1', 'motorcycle'),
+('PBX', 'smallboat'),
+('PBX_DZ', 'smallboat'),
+('Pickup_PK_DZ', 'car'),
+('Roket_Maule_M7_STD', 'plane'),
+('S1203_TK_CIV_EP1', 'bus'),
+('Sandbag1_DZ', 'sandbag'),
+('Skoda', 'car'),
+('SkodaBlue', 'car'),
+('SkodaGreen', 'car'),
+('SkodaRed', 'car'),
+('Smallboat_1', 'mediumboat'),
+('Smallboat_1_DZ', 'mediumboat'),
+('Smallboat_2', 'mediumboat'),
+('Smallboat_2_DZ', 'mediumboat'),
+('SUV_Blue', 'car'),
+('SUV_Charcoal', 'car'),
+('SUV_Green', 'car'),
+('SUV_Orange', 'car'),
+('SUV_Pink', 'car'),
+('SUV_Red', 'car'),
+('SUV_Silver', 'car'),
+('SUV_Special', 'car'),
+('SUV_TK_CIV_EP1', 'car'),
+('SUV_TK_EP1', 'car'),
+('SUV_White', 'car'),
+('SUV_Yellow', 'car'),
+('TentStorage', 'tent'),
+('TowingTractor', 'tractor'),
+('Tractor', 'tractor'),
+('TT650_Civ', 'motorcycle'),
+('TT650_Gue', 'motorcycle'),
+('TT650_Ins', 'motorcycle'),
+('TT650_TK_CIV_EP1', 'motorcycle'),
+('TT650_TK_EP1', 'motorcycle'),
+('UAZ_INS', 'car'),
+('UAZ_MG_DZ', 'car'),
+('UAZ_RU', 'car'),
+('UAZ_Unarmed_TK_CIV_EP1', 'car'),
+('UAZ_Unarmed_TK_EP1', 'car'),
+('UAZ_Unarmed_UN_EP1', 'car'),
+('UH1H_DZ', 'helicopter'),
+('UralCivil', 'truck'),
+('UralCivil2', 'truck'),
+('UralRefuel_INS', 'truck'),
+('Ural_INS', 'truck'),
+('V3S_Civ', 'truck'),
+('VolhaLimo_TK_CIV_EP1', 'car'),
+('Volha_1_TK_CIV_EP1', 'car'),
+('Volha_2_TK_CIV_EP1', 'car'),
+('VWGolf', 'car'),
+('Wire_cat1', 'wire'),
+('Zodiac_DZ', 'smallboat');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `adm_objects`
 --
 
