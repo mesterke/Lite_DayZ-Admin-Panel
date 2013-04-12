@@ -67,8 +67,6 @@ Download the zip file and extract to the "maps" folder in your web directory.
 </tr>
 </table>
 
------------------
-
 How to UNinstall:
 =================
 
