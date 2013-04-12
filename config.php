@@ -36,7 +36,7 @@ if(!defined('INSTANCE')) {
 exit;}
 
 
-if(!@mysql_connect(SERVERIP, USERNAME, PASSWORD)) { echo "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /><font color=red size=6>".$lng_mysql_err_connect[$ses_lng]."</font> ";  exit;}
+if(!@mysql_connect(MYSQLIP.':'.MYSQLPORT, USERNAME, PASSWORD)) { echo "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\" /><font color=red size=6>".$lng_mysql_err_connect[$ses_lng]."</font> ";  exit;}
 
 if(isset($_SESSION['bdname'])) $dbSessionName=$_SESSION['bdname']; else  {
     

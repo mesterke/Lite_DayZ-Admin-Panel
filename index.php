@@ -12,7 +12,7 @@ require_once 'actions/functions.php';
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title><?=$lng_title[$ses_lng]?></title>
+<title><?=SITENAME;?></title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
@@ -31,7 +31,7 @@ require_once 'actions/functions.php';
     
     <h2><a href="#" title=" <?=$lng_site_description[$ses_lng]?>  SkynetDev"><img width="80" src="images/logo.png"></a>
          <div> 
-             Admin Panel for Lite DayZ Private Server
+             <?=SITENAME;?>
          </div>
     </h2>
     
@@ -74,7 +74,7 @@ require_once 'actions/functions.php';
 </div>
 <div id="footer">
     <div id="footer_text">&copy;2012 All Rights Reserved. Free Admin Panel for Bliss Dayz Private Server. Alfa version 1.0 Created by <a target="_blank" href="https://github.com/skynetdev/bliss_admin_panel"><font color="#D56E22">SkyNetDev</font></a><br />
-    Modded by Denocle for <a target="_blank" href="https://github.com/Stapo/Lite-DayZ-Private-Server"><font color="#D56E22">Lite DayZ Private Server</font></a></div> 
+    Modded by <a target="_blank" href="https://github.com/UtraTM/Lite_DayZ-Admin-Panel"><font color="#D56E22">Denocle and UltraTM</font></a> for <a target="_blank" href="https://github.com/Stapo/Lite-DayZ-Private-Server"><font color="#D56E22">Lite DayZ Private Server</font></a></div> 
 
     
         
